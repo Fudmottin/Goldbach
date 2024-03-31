@@ -6,12 +6,20 @@ every even number greater than 2 can be expressed as the sum of two primes.
 This program accepts an even number as an argument and outputs
 two prime numbers that sum up to the input number.
 
+But there's more! `findPrimes` deals with 64 bit unsigned integers. It has
+a small optimization whereby a number of primes are precomputed during the
+compile phase. I'm not sure it makes much of a difference. Gonna have to
+profile to find out. `findPrimesBig` uses the Boost Multiprecision library
+and the Miller-Rabin primality test to handle numbers as big as you can
+type in on the command line. The performance is a bit of an eye opener.
+
 ## Compilation
 
 The program is written in C++20 and can be compiled with the following command:
 
 ```bash
 c++ -std=c++20 -O3 -o findPrimes findPrimes.cpp
+c++ -std=c++20 -O3 -o findPrimesBig findPrimesBig.cpp
 ```
 
 ## Usage
