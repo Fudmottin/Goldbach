@@ -12,4 +12,26 @@ The program is written in C++20 and can be compiled with the following command:
 
 ```bash
 c++ -std=c++20 -O3 -o findPrimes findPrimes.cpp
+```
+
+## Usage
+
+After compiling, you can run the program by passing an even number greater
+than 2 as an argument:
+
+```bash
+./findPrimes 10
+```
+
+This will output two prime numbers that add up to 10, for example:
+
+```bash
+10 = 3 + 7
+```
+
+## License
+
+This code is licensed under the MIT License. See the LICENSE file for details.
+
+Have fun with it!
 
