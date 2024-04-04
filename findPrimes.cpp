@@ -7,7 +7,9 @@ const uint64_t NUM_PRIMES = 2000;
 
 constexpr bool isPrime(uint64_t n) {
     if (n <= 1) return false;
-    for (uint64_t i = 2; i * i <= n; i++) {
+    if (n == 2) return true;
+    if ((n & 1) == 0) return false;
+    for (uint64_t i = 3; i * i <= n; i += 2) {
         if (n % i == 0) return false;
     }
     return true;
