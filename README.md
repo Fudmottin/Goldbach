@@ -37,6 +37,11 @@ This will output two prime numbers that add up to 10, for example:
 10 = 3 + 7
 ```
 
+## Dependencies
+
+- [Boost C++ Libraries](https://www.boost.org/) (specifically `boost/multiprecision/cpp_int.hpp`)
+
+
 ## License
 
 This code is licensed under the MIT License. See the LICENSE file for details.
