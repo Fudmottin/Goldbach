@@ -20,7 +20,7 @@ cpp_int powMod(cpp_int base, cpp_int exp, cpp_int mod) {
 
 bool millerRabinTest(cpp_int n, int k) {
     if (n <= 1 || n == 4) return false;
-    if (n <= 3) return true;
+    if (n <= 5) return true;
 
     cpp_int d = n - 1;
     while ((d & 1) == 0) {
