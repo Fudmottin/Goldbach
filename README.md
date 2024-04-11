@@ -19,7 +19,12 @@ The program is written in C++20 and can be compiled with the following command:
 
 ```bash
 c++ -std=c++20 -O3 -o findPrimes findPrimes.cpp
-c++ -std=c++20 -O3 -o findPrimesBig findPrimesBig.cpp
+c++ -std=c++20 -O3 -o findPrimesBig findPrimesBig.cpp external/Miller_Rabin/miller_rabin.cpp
+```
+On my M2 Mac mini, I had to compile `findPrimesBig` this way:
+
+```bash
+c++ -std=c++20 -I /opt/homebrew/Cellar/boost/1.84.0_1/include -O3 -o findPrimesBig findPrimesBig.cpp external/Miller_Rabin/miller_rabin.cpp
 ```
 
 ## Usage
